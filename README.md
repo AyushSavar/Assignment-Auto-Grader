@@ -49,6 +49,7 @@ streamlit run login.py
 ![Test Cases Evaluation and Plague Checker](./images/4.png)
 ![Test Cases Evaluation and Plague Checker](./images/5.png)
 ![View Submissions](./images/6.png)
+![Database Schema](./images/7.png)
 ##
 Link to demonstration : https://drive.google.com/drive/folders/1z3c3kWJSa13Wfinx4feV6KJnXSL8H8e3?usp=sharing 
 
