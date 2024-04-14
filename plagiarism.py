@@ -41,14 +41,24 @@ def calculate_similarity(text1, text2):
 
 def plag_checker_master(l):
     print(l)
-    num_files = len(l[0])
+    num_files = len(l[0][0])
+    
     plag_results = []
     for i in range(num_files):
-        l_file = []
+        
+    
         for file_group in l:
-            l_file.append(file_group)
-        l3 = plag_checker(l)
-        plag_results.append(l3)
+            l_file = []
+            for file in file_group:
+                print(file)
+                l_file.append(file[0].decode('utf-8'))
+            
+            print(l_file)
+            l3 = plag_checker(l_file)
+                
+            plag_results.append(l3)
+    print("^^^^")
+    print(plag_results)
     return plag_results
             
         

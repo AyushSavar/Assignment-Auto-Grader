@@ -1,6 +1,7 @@
 import streamlit as st
 from utils import *
 from constants import *
+from datetime import date
 
 course = st.selectbox("Choose Course", options = get_student_courses(username, assigned))
 assignment = st.selectbox("Choose Assignment", options = get_student_assignments(username, course, assigned))
@@ -12,4 +13,4 @@ with col2:
     submit = st.button(label = "Make Submission")
     if (submit):
         for file in files:
-            st.write((add_submission(username, course, assignment, file.read(), comment, assignments)))
+            st.write((add_submission(username, course, assignment, file.read(), comment, assignments, file.name,date.today())))
