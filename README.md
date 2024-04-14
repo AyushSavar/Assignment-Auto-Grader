@@ -53,6 +53,6 @@ streamlit run login.py
 Link to demonstration : https://drive.google.com/drive/folders/1z3c3kWJSa13Wfinx4feV6KJnXSL8H8e3?usp=sharing 
 
 Made by : 
-1. Arush Shaleen Mathur
-2. Ayush Kumar
-3. Ayush Savar
+1. Arush Shaleen Mathur(220101017)
+2. Ayush Kumar(220101021)
+3. Ayush Savar(220101022)
