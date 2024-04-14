@@ -1,5 +1,6 @@
 import hmac
 import streamlit as st
+from passwords import *
 
 def write_constants(ta):
     """Writes constants to the file constants.py"""
@@ -22,8 +23,7 @@ def check_password():
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
-        if st.session_state["username"] in st.secrets["passwords"] and hmac.compare_digest(
-            st.session_state["password"], st.secrets.passwords[st.session_state["username"]]
+        if (st.session_state["username"] in usernames and passwords[st.session_state["username"]]==st.session_state["password"]
         ):
             st.session_state["password_correct"] = True
         else:

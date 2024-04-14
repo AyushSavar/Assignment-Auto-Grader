@@ -39,6 +39,19 @@ def calculate_similarity(text1, text2):
 
     return cosine_similarity(tfidf)[0][1]
 
+def plag_checker_master(l):
+    print(l)
+    num_files = len(l[0])
+    plag_results = []
+    for i in range(num_files):
+        l_file = []
+        for file_group in l:
+            l_file.append(file_group)
+        l3 = plag_checker(l)
+        plag_results.append(l3)
+    return plag_results
+            
+        
 def plag_checker(l):
     ll = []
     len_l=len(l);
@@ -54,4 +67,4 @@ def plag_checker(l):
         else:
             ll.append(0)
             
-    return ll;
+    return ll
