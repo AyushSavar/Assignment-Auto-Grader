@@ -27,11 +27,28 @@ The plague checker calculates the cosine similarity score based on their TF-IDF 
 1. After logging in, if the user goes back to the login page, the session state no longer exists hence an error pops up. To circumvent this reload the page. This does not affect the working of the portal. 
 2. Plagiarism and late submission are implemented correctly in the backend but code to display these could not be completed.
 
+### Installing the dependencies
+**Make sure that you have `Python 3.10` installed in your system**
+
+Run the following command in the terminal
+```
+pip install -r requirements.txt
+```
+
 ### Running the program
 Now, to run the script enter the following command in the terminal
 ```bash
 streamlit run login.py
 ```
+
+# Screenshots
+
+![Student Login](./images/1.png)
+![Make Submission](./images/2.png)
+![TA Login](./images/3.png)
+![Test Cases Evaluation and Plague Checker](./images/4.png)
+![Test Cases Evaluation and Plague Checker](./images/5.png)
+![View Submissions](./images/6.png)
 ##
 Link to demonstration : https://drive.google.com/drive/folders/1z3c3kWJSa13Wfinx4feV6KJnXSL8H8e3?usp=sharing 
 
