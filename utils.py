@@ -77,7 +77,7 @@ def get_assignments_to_evaluate(ta_id,table):
     s = set()
     s1 = []
     print(s1)
-           
+    roll_nums = []
     texts = []
     cursor1 = assignments.find()
     for x in cursor:
@@ -85,20 +85,29 @@ def get_assignments_to_evaluate(ta_id,table):
     for x in cursor1:
         if (x['course'],x['roll_num']) in s1:
             s.add(x['assignment_num'])
-            texts.append(x['file'])
+            roll_nums.append(x['roll_num'])
+            texts.append(x['file'].decode('utf-8'))
     s=list(s)
-    return (s, texts)
+    return (s, texts, roll_nums)
+
     
 def get_students_associated(ta_id, assignment,table):
-
-    #table = ta 
-    query = {'ta_roll_num':ta_id,'assignment':assignment}
-    cursor = table.find(query)
-    s = []
+    query = {'ta_roll_num':ta_id}
+    print(query)
+    cursor = ta.find(query)
+    s = set()
+    s1 = []
+    print(s1)
+    cursor1 = assignments.find()
     for x in cursor:
-        s.append(x['roll_num'])
+        s1.append((x['roll_num']))
+    for x in cursor1:
+        if (x['roll_num']) in s1 and x['assignment_num']==assignment: 
+            s.add(x['roll_num'])
+    s=list(s)
     return s
     
+   
 def return_assignment(ta_id, roll_number, course, assignment, marks, plag, comments,table):
     #table = graded
     user_data = {'roll_num':roll_number,'course':course,'assignment':assignment,'marks':marks,'plag':plag,'comments':comments}
