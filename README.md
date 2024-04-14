@@ -27,6 +27,11 @@ The plague checker calculates the cosine similarity score based on their TF-IDF 
 1. After logging in, if the user goes back to the login page, the session state no longer exists hence an error pops up. To circumvent this reload the page. This does not affect the working of the portal. 
 2. Plagiarism and late submission are implemented correctly in the backend but code to display these could not be completed.
 
+### Running the program
+Now, to run the script enter the following command in the terminal
+```bash
+streamlit run login.py
+```
 ##
 Link to demonstration : https://drive.google.com/drive/folders/1z3c3kWJSa13Wfinx4feV6KJnXSL8H8e3?usp=sharing 
 
