@@ -66,13 +66,14 @@ streamlit run login.py
 
 # Screenshots
 
-![Student Login](./images/1.png)
-![Make Submission](./images/2.png)
-![TA Login](./images/3.png)
-![Test Cases Evaluation and Plague Checker](./images/4.png)
-![Test Cases Evaluation and Plague Checker](./images/5.png)
-![View Submissions](./images/6.png)
-![Database Schema](./images/7.png)
+![Student Login](./images/real1.png)
+![Make Submission](./images/real2.png)
+![TA Login](./images/real3.png)
+![Test Cases Evaluation and Plague Checker](./images/real4.png)
+![Test Cases Evaluation and Plague Checker](./images/real5.png)
+![View Submissions](./images/real6.png)
+![Database Schema](./images/real7.png)
+![Database Schema](./images/real8.png)
 ##
 Link to demonstration : https://drive.google.com/drive/folders/1z3c3kWJSa13Wfinx4feV6KJnXSL8H8e3?usp=sharing 
 
