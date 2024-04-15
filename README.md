@@ -38,7 +38,7 @@ We have used the following metrics for our c++ analyzer -
 
 (v)Variable Naming or Scoping Issue Level
 
-
+6. No API calls - We are not using any API calls for anything. We have written the code for both the plag checker and the code analyzer for c++. For python, we are importing the pylint module.
 
 
 # Future Updates
