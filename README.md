@@ -23,7 +23,7 @@ The plague checker calculates the cosine similarity score based on their TF-IDF 
 2. Mobile Application: Develop a mobile application version of the portal, providing students with convenient access to assignment submission, grading feedback, and course materials on their smartphones or tablets.
 
 # Known Errors
-1. Plagiarism and late submission are implemented correctly in the backend but code to display these could not be completed.
+1. Late submission is implemented correctly in the backend but code to display these could not be completed.
 
 ### Installing the dependencies
 **Make sure that you have `Python 3.10` installed in your system**
