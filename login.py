@@ -46,7 +46,12 @@ if not check_password():
 st.header("Authentication Successful!")
 
 # Write constants based on authentication success
-if st.session_state["username"].startswith("s"):
-    write_constants(0)
-else:
-    write_constants(1)
+
+
+try:
+    if st.session_state["username"].startswith("s"):
+        write_constants(0)
+    else:
+        write_constants(1)
+except: 
+    pass
