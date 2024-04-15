@@ -5,7 +5,7 @@ Assignment submission and grading portal with both student and evaluator interfa
 
 # Features
 
-1. Authentication : 
+1. Authentication
 
 2. Uploading of files : Students can securely sign in and submit multiple files for all their assignments through the portal, streamlining the submission process and ensuring convenience and confidentiality.
 
@@ -24,8 +24,7 @@ The plague checker calculates the cosine similarity score based on their TF-IDF 
 2. Mobile Application: Develop a mobile application version of the portal, providing students with convenient access to assignment submission, grading feedback, and course materials on their smartphones or tablets.
 
 # Known Errors
-1. After logging in, if the user goes back to the login page, the session state no longer exists hence an error pops up. To circumvent this reload the page. This does not affect the working of the portal. 
-2. Plagiarism and late submission are implemented correctly in the backend but code to display these could not be completed.
+1. Plagiarism and late submission are implemented correctly in the backend but code to display these could not be completed.
 
 ### Installing the dependencies
 **Make sure that you have `Python 3.10` installed in your system**
@@ -34,6 +33,7 @@ Run the following command in the terminal
 ```
 pip install -r requirements.txt
 ```
+
 
 ### Running the program
 Now, to run the script enter the following command in the terminal
