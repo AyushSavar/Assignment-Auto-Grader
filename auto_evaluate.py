@@ -595,25 +595,25 @@ def tc_checker(l,l1,l2):
     fe=convert_to_file(l, filename='code')
     #print(1111111111111111111111111111111111111111111111111)
     passed=0
-    com=""
+    com=[]
     tot_score=0
     
     if(fe!=0):
         
-        com+=check_commenting(l)[0]
+        com.append([check_commenting(l)[0]])
         tot_score+=check_commenting(l)[1]
-        com+=check_expressions(l)[0]
+        com.append([check_expressions(l)[0]])
         tot_score+=check_expressions(l)[1]
-        com+=check_repetition(l)[0]
+        com.append([check_repetition(l)[0]])
         tot_score+=check_repetition(l)[1]
-        com+=check_indentation(l)[0]
+        com.append([check_indentation(l)[0]])
         tot_score+=check_indentation(l)[1]
-        com+=check_variables(l)[0]  
+        com.append([check_variables(l)[0]])  
         tot_score+=check_variables(l)[1] 
         
     else:
         
-        com+=python_analyser(l)[0]
+        com.append([python_analyser(l)[0]])
         tot_score+=python_analyser(l)[1]
         
     for x in range(len(l1)):

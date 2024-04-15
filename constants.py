@@ -1,2 +1,2 @@
-ta = -1
-username = ''
+TA = 0
+username = 'student_1'

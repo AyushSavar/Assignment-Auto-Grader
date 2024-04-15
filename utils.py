@@ -27,6 +27,21 @@ def get_student_courses(roll_number,table):
     s = list(s)
     return s
 
+def get_roll_numbers(username):
+    query = {'ta_roll_num':username}
+    cursor = ta.find(query)
+    rolls = []
+    for x in cursor:
+        rolls.append(x['roll_num'])
+    return rolls    
+    
+
+def insert_into_assigned(roll_num,course,assignment_num,deadline):
+    data = {'roll_num':roll_num,'course':course,'assignment_num':assignment_num,'deadline':deadline}
+    assigned.insert_one(data)
+
+    return
+
 def get_grade(roll_number, course, assignment,file_name):
     query = {'roll_num':roll_number, 'course':course, 'assignment_num':assignment,'file':file_name}
     cursor = graded.find(query)
@@ -135,7 +150,12 @@ def get_graded_files(roll_num, assignment_num):
         file_names.append(x['file_name'])
     return file_names
 
-
+def get_late_status(username, course, assignment, file_name):
+    query = {'roll_num':username, 'course':course, 'assignment_num':assignment, 'file_name':file_name}
+    cursor = assignments.find(query)
+    for x in cursor:
+        return x['islate']
+    
 def get_plag_list(ta_id, assignment):
     # Fetch roll numbers of students associated with the given TA and course
     query_ta = {'ta_roll_num': ta_id}

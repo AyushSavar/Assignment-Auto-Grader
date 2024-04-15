@@ -7,7 +7,16 @@ student = st.selectbox("Choose Student", options = get_students_associated(usern
 file_name = st.selectbox("Choose file", options = get_uploaded_files(student, assignment))
 course = get_course(username)
 
-col1, col2, col3 = st.columns(3)
+
+st.markdown("***")
+late_status = get_late_status(student, course, assignment, file_name)
+if (late_status):
+    st.write("Late Submission !")
+
+col1, col2 = st.columns(2)
+
+##roll num ,course, assignment, marks, plag, comm
+#print(get_grade(username, course, assignment, file_name))
 
 with col1:
     st.subheader("Marks")
@@ -15,15 +24,41 @@ with col1:
         st.write(get_grade(student, course, assignment, file_name)[0])
     except:
         st.write("Not Graded Yet!")
+        
+with col2:
     st.subheader("Plagiarism Status")
     try:
         st.write(get_grade(student, course, assignment, file_name)[1])
     except:
         st.write("Not Graded Yet!")
+    
+st.subheader("Additional Remarks")
+col1, col2 = st.columns(2)
+
+try:
+    feedback = (get_grade(student, course, assignment, file_name)[2])
+    
+    with col1:
         
-with col3:
-    st.subheader("Comments")
-    try:
-        st.write(get_grade(student, course, assignment, file_name)[2])
-    except:
-        st.write("Not Graded Yet!")
+        if (len(feedback)==1):
+            comments = st.text_area(label = "Remarks", value = feedback[0][0])
+        else:
+            comments = st.text_area(label = "Comments", value = feedback[0][0])
+            expressions = st.text_area(label = "Expressions", value = feedback[1][0])
+            variables = st.text_area(label = "Variable Naming", value = feedback[4][0])
+    with col2:
+        if (len(feedback)>1):
+            repetition = st.text_area(label = "Repetition", value = feedback[2][0])
+            indentation = st.text_area(label = "Indentation", value = feedback[3][0])
+except:
+    print(1)    
+    
+#st.markdown("***")
+
+#st.subheader("Request to re-evaulate")
+#request = st.text_area(label = "Enter further details")
+
+
+#col1, col2, col3 = st.columns(3)
+#with col2:
+#    submit = st.button(label = "Submit Request")    

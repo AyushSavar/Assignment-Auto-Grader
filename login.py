@@ -3,11 +3,15 @@ import streamlit as st
 from passwords import *
 
 def write_constants(ta):
-    """Writes constants to the file constants.py"""
-    with open("constants.py", "w") as file:
-        file.write(f"ta = {ta}\n")
-        file.write(f"username = '{st.session_state.get('username', '')}'\n")
-
+    try:
+        if st.session_state["username"]:
+            #Writes constants to the file constants.py
+            with open("constants.py", "w") as file:
+                file.write(f"TA = {ta}\n")
+                file.write(f"username = '{st.session_state.get('username', '')}'\n")
+    except:
+        return
+    
 # Write default constants
 write_constants(-1)
 
