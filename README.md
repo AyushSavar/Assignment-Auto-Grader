@@ -66,18 +66,12 @@ streamlit run login.py
 
 # sample credentials to run :
 Student
-username : student_1
-password : student_1
-
-username : student_2
-password : student_2
+1. username : student_1, password : student_1
+2. username : student_2, password : student_2
 
 TA
-username : ta_1
-password : ta_1
-
-username : ta_2
-password : ta_2
+1. username : ta_1, password : ta_1
+2. username : ta_2, password : ta_2
 
 # Screenshots
 
