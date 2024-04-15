@@ -64,6 +64,21 @@ Now, to run the script enter the following command in the terminal
 streamlit run login.py
 ```
 
+# sample credentials to run :
+Student
+username : student_1
+password : student_1
+
+username : student_2
+password : student_2
+
+TA
+username : ta_1
+password : ta_1
+
+username : ta_2
+password : ta_2
+
 # Screenshots
 
 ![Student Login](./images/real1.png)
