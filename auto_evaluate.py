@@ -16,12 +16,16 @@ def python_analyser(code):
     
     # Capture the output
     stdout, stderr = process.communicate()
-    
-    s = stdout.decode()
-    index = s.find("/10")
-    s = s[:index+3]
 
-    return [s,2.5*float(s[index-4:index])]
+    s = stdout.decode()
+    print("#########################################")
+    print(s)
+   
+    index1 = s.find("(pre")
+
+    
+
+    return [s,2.5*float(s[index1-8:index1- 4])]
 
 def upd_code(code_inp):
 
@@ -543,6 +547,7 @@ def run_python_with_input(py_file, input_text):
     if execution_process.returncode != 0:
         print("Execution failed:")
         print(execution_process.stderr)
+        print("faaaaail")
         return
     
     # Return the output of the program
@@ -593,7 +598,8 @@ def convert_to_file(code_string, filename='code'):
 
 def tc_checker(l,l1,l2):
     fe=convert_to_file(l, filename='code')
-    #print(1111111111111111111111111111111111111111111111111)
+    # print(fe)
+    # print(1111111111111111111111111111111111111111111111111)
     passed=0
     com=[]
     tot_score=0
@@ -619,11 +625,13 @@ def tc_checker(l,l1,l2):
     for x in range(len(l1)):
         if(fe==0):
             out=run_python_with_input('code.py',l1[x])
-        if(fe==1):
+            # print(out,"1111111111111111111111111111111111111111111111111111111111111")
+        elif(fe==1):
             out=run_cpp_with_input('code.cpp',l1[x]) 
         else:
+            # print("222222222222222222222222222222222",type(fe))
             out=run_c_with_input('code.c',l1[x])
-  
+            
         if(out.strip()==l2[x]):
             passed=passed+1
     tot_score+=(passed/len(l1))*75
