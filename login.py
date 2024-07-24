@@ -1,6 +1,7 @@
 import hmac
 import streamlit as st
 from passwords import *
+import hashlib
 
 def write_constants(ta):
     try:
@@ -27,7 +28,8 @@ def check_password():
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
-        if (st.session_state["username"] in usernames and passwords[st.session_state["username"]]==st.session_state["password"]
+        hashed_password = hashlib.sha256(st.session_state["password"].encode()).hexdigest()
+        if (st.session_state["username"] in usernames and passwords[st.session_state["username"]]==hashed_password
         ):
             st.session_state["password_correct"] = True
         else:
