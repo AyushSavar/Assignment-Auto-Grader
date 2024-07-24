@@ -61,7 +61,7 @@ pip install -r requirements.txt
 ### Running the program
 Now, to run the script enter the following command in the terminal
 ```bash
-streamlit run login.py
+streamlit run Login.py
 ```
 
 # sample credentials to run :
