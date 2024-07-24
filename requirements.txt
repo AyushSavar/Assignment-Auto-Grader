@@ -4,4 +4,3 @@ hmac
 argparse
 nltk
 sklearn
-difflib
